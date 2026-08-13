@@ -1,0 +1,227 @@
+/* ==========================================
+   Modal Overlay
+========================================== */
+
+.modal-overlay{
+position:fixed;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(15,23,42,.55);
+backdrop-filter:blur(6px);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+animation:fadeIn .25s ease;
+}
+
+/* ==========================================
+   Modal Card
+========================================== */
+
+.modal-card{
+width:100%;
+max-width:560px;
+background:#ffffff;
+border-radius:24px;
+padding:28px;
+box-shadow:0 25px 60px rgba(15,23,42,.25);
+animation:popup .25s ease;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.modal-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+padding-bottom:18px;
+border-bottom:1px solid #e5e7eb;
+}
+
+.modal-header h2{
+font-size:28px;
+font-weight:700;
+color:#111827;
+}
+
+.modal-header button{
+width:42px;
+height:42px;
+border:none;
+border-radius:12px;
+background:#f1f5f9;
+cursor:pointer;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:20px;
+transition:.3s;
+}
+
+.modal-header button:hover{
+background:#ef4444;
+color:#ffffff;
+}
+
+/* ==========================================
+   Form
+========================================== */
+
+.folder-form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.folder-form label{
+font-size:15px;
+font-weight:600;
+color:#334155;
+margin-bottom:-8px;
+}
+
+.folder-form input[type="text"],
+.folder-form textarea{
+width:100%;
+padding:14px 18px;
+border:1px solid #dbe3ee;
+border-radius:14px;
+font-size:15px;
+outline:none;
+transition:.3s;
+background:#f8fafc;
+}
+
+.folder-form textarea{
+resize:none;
+min-height:120px;
+}
+
+.folder-form input[type="text"]:focus,
+.folder-form textarea:focus{
+border-color:#2563eb;
+box-shadow:0 0 0 4px rgba(37,99,235,.12);
+background:#ffffff;
+}
+
+.folder-form input[type="color"]{
+width:80px;
+height:48px;
+border:none;
+background:none;
+cursor:pointer;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.folder-buttons{
+display:flex;
+justify-content:flex-end;
+gap:15px;
+margin-top:10px;
+}
+
+.cancel-btn{
+padding:12px 24px;
+border:none;
+border-radius:14px;
+background:#e2e8f0;
+color:#334155;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.cancel-btn:hover{
+background:#cbd5e1;
+}
+
+.save-btn{
+padding:12px 28px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+color:#ffffff;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 12px 25px rgba(37,99,235,.25);
+}
+
+.save-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 16px 35px rgba(37,99,235,.35);
+}
+
+.save-btn:disabled{
+opacity:.7;
+cursor:not-allowed;
+transform:none;
+}
+
+/* ==========================================
+   Animations
+========================================== */
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:translateY(30px) scale(.95);
+}
+
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+.modal-card{
+width:92%;
+padding:22px;
+border-radius:20px;
+}
+
+.modal-header h2{
+font-size:22px;
+}
+
+.folder-buttons{
+flex-direction:column;
+}
+
+.cancel-btn,
+.save-btn{
+width:100%;
+}
+
+}

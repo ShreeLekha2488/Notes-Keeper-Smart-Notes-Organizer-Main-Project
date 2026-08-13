@@ -1,0 +1,442 @@
+/* =====================================================
+   DASHBOARD LAYOUT
+===================================================== */
+
+.dashboard-container{
+    margin-left:220px;
+    min-height:100vh;
+    background:#f4f7fc;
+}
+
+.dashboard-content{
+    padding:35px;
+}
+
+
+/* =====================================================
+   WELCOME FLASH CARD
+===================================================== */
+
+.welcome-flash{
+
+    width:100%;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#fff;
+
+    border-radius:24px;
+
+    padding:45px;
+
+    margin-bottom:35px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:
+        0 20px 45px rgba(37,99,235,.28);
+
+    animation:
+        welcomeSlide .9s ease,
+        welcomeFloat 5s ease-in-out infinite;
+}
+
+.welcome-flash::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-60px;
+    top:-60px;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+}
+
+.welcome-flash::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-80px;
+    left:-80px;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+}
+
+.welcome-content{
+
+    position:relative;
+
+    z-index:10;
+}
+
+.welcome-content h1{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+
+    letter-spacing:.5px;
+}
+
+.welcome-content span{
+
+    color:#fde047;
+}
+
+.welcome-content p{
+
+    font-size:22px;
+
+    opacity:.95;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    transition:.35s;
+
+    box-shadow:
+        0 12px 28px rgba(15,23,42,.07);
+}
+
+.stat-card:hover{
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 22px 42px rgba(15,23,42,.12);
+}
+
+.stat-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:32px;
+
+    flex-shrink:0;
+}
+
+.stat-card h2{
+
+    font-size:36px;
+
+    color:#0f172a;
+
+    margin-bottom:5px;
+}
+
+.stat-card p{
+
+    color:#64748b;
+
+    font-size:15px;
+}
+
+
+/* =====================================================
+   DASHBOARD GRID
+===================================================== */
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+}
+
+.dashboard-box{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    min-height:260px;
+
+    transition:.35s;
+
+    box-shadow:
+        0 12px 30px rgba(15,23,42,.07);
+}
+
+.dashboard-box:hover{
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 22px 42px rgba(15,23,42,.12);
+}
+
+.dashboard-box h3{
+
+    font-size:24px;
+
+    color:#0f172a;
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+}
+
+.dashboard-box p{
+
+    color:#64748b;
+
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   LIST ITEMS
+===================================================== */
+
+.list-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.list-item:hover{
+
+    background:#eef4ff;
+
+    border-color:#2563eb;
+
+    transform:translateX(6px);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes welcomeSlide{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(-35px)
+            scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+@keyframes welcomeFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1300px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:992px){
+
+.dashboard-container{
+
+margin-left:210px;
+
+}
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard-container{
+
+margin-left:190px;
+
+}
+
+.dashboard-content{
+
+padding:20px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.welcome-content h1{
+
+font-size:34px;
+
+}
+
+.welcome-content p{
+
+font-size:17px;
+
+}
+
+.dashboard-box{
+
+min-height:auto;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.welcome-flash{
+
+padding:30px;
+
+}
+
+.welcome-content h1{
+
+font-size:28px;
+
+}
+
+.stat-card{
+
+padding:20px;
+
+}
+
+.stat-card h2{
+
+font-size:30px;
+
+}
+
+}

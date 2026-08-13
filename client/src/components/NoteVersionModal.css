@@ -1,0 +1,162 @@
+.version-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.version-modal-card {
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.version-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.version-modal-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #111827;
+}
+
+.version-modal-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.version-close-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.version-close-btn:hover {
+  background: #e2e8f0;
+}
+
+.version-modal-content {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.version-loading {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+}
+
+.version-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #64748b;
+}
+
+.version-empty svg {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.version-empty h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.version-empty p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.version-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.version-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.version-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.version-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2563eb;
+}
+
+.version-date {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.version-title {
+  color: #111827;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.version-content {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.version-modal-footer {
+  padding: 15px 24px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.version-close-button {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.version-close-button:hover {
+  background: #1d4ed8;
+}
